@@ -1,17 +1,17 @@
-import { signIn } from "@/auth";
-import { GlobeIcon } from "lucide-react";
+import { GithubIcon } from "lucide-react";
+import { signIn } from "../../auth";
 import { Button } from "../ui/button";
 
-export default function SignIn() {
+export default function SignInWithGithub() {
   return (
     <form
       action={async () => {
         "use server";
-        await signIn("google");
+        await signIn("github");
       }}
     >
       <Button type="submit" variant="default">
-        Sign In With <GlobeIcon />
+        Sign In With <GithubIcon />
       </Button>
     </form>
   );
