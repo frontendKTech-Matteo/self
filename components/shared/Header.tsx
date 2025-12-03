@@ -1,27 +1,8 @@
-import SignInWithGithub from "./SignInWithGithub";
-import SignInWithGoogle from "./SignInWithGoogle";
-
 import { auth } from "@/auth";
 import Image from "next/image";
-
-import { signOut } from "@/auth";
-import { LogOutIcon } from "lucide-react";
-import { Button } from "../ui/button";
-
-export function SignOut() {
-  return (
-    <form
-      action={async () => {
-        "use server";
-        await signOut();
-      }}
-    >
-      <Button type="submit" variant="destructive">
-        <LogOutIcon /> Sign Out
-      </Button>
-    </form>
-  );
-}
+import SignInWithGithub from "./SignInWithGithub";
+import SignInWithGoogle from "./SignInWithGoogle";
+import SignOut from "./SignOut";
 
 export default async function Header() {
   const session = await auth();
