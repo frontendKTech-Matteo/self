@@ -3,3 +3,4 @@ export { default as Header } from "./Header";
 export { default as SignInWithGithub } from "./SignInWithGithub";
 export { default as SignInWithGoogle } from "./SignInWithGoogle";
 export { default as SignOut } from "./SignOut";
+export { default as UserAvatar } from "./UserAvatar";
